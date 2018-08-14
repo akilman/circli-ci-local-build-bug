@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.4
+      # more at https://circleci.com/docs/2.0/circleci-images/
+
+    working_directory: ~/repro
+
+    steps:
+      - run:
+          name: Sanity check 
+          command: ls -al 
